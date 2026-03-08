@@ -21,8 +21,12 @@ Para que dosbox reconozca nuestros archivos, debemos vincular la carpeta que ten
 Configuramos el teclado con el comando `keyb sp`, activando la distribución e español. 
 Debemos premitir que el sistema reconozca los comandos del compilador desde cualquier sitio, configurando el entorno Borland    
 ```set PATH=%PATH%;C:\BC\BIN```    
-Este comando permite ejecutar el ensamblador y el enlazador desde cualquier ubicación.    
-![Comandos configuración DOSBox](img_memoria/comandos_dosbox.png)                
+Este comando permite ejecutar el ensamblador y el enlazador desde cualquier ubicación.
+
+<p align="center">
+  <img src="img_memoria/comandos_dosbox.png" width="500">
+</p>    
+           
 * **Pruebas:**
 A continuación, para verificar que realmente el entorno es funcional, probaremos varios métodos.
     
