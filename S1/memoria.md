@@ -28,9 +28,19 @@ A continuación, para verificar que realmente el entorno es funcional, probaremo
     
 **1. Ejecución de aplicaciones clasicas de MS-DOS**    
 En este caso, he descargado una versión del juego clásico del Tetris de una plataforma online. La carpeta con todo el código fuente y ejecutables se ubica en la carpeta de nuestro directorio home. A continuación, para ejecutar el juego, escribimos  ```tetris ``` y lo ponemos a funcionar.    
-![Tetris](img_memoria/carpeta_tetris.png)  
-![Tetris](img_memoria/tetris_juego.png)  
+
+<p align="center">
+  <img src="img_memoria/carpeta_tetris.png" width="500">
+</p>
+
+<p align="center">
+  <img src="img_memoria/tetris_juego.png" width="500">
+</p>
+
     
 **2. Uso del entorno Borland: diseño del programa ```hola.asm```** 
-Este ejemplo imprime el mensaje "Hola Mundo" en bucle siete veces. Para ello, se crea el archivo fuente  [hola.asm](./ejemplos/hola.asm) y con la ayuda de  ```tasm hola.asm``` generamos el archivo objeto. Por otro lado  ```tslink hola.obj``` nos permite crear el ejecutable ```HOLA.EXE```. Por último, se ejecuta el programa y se verifica que la salida por pantalla muestra el mensaje indicado 7 veces exactas.                    
-![Hola Mundo](img_memoria/hola_mundo.png)  
+Este ejemplo imprime el mensaje "Hola Mundo" en bucle siete veces. Para ello, se crea el archivo fuente  [hola.asm](./ejemplos/hola.asm) y con la ayuda de  ```tasm hola.asm``` generamos el archivo objeto. Por otro lado  ```tslink hola.obj``` nos permite crear el ejecutable ```HOLA.EXE```. Por último, se ejecuta el programa y se verifica que la salida por pantalla muestra el mensaje indicado 7 veces exactas.  
+
+<p align="center">
+  <img src="img_memoria/hola_mundo.png" width="500">
+</p>
