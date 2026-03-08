@@ -7,7 +7,8 @@ El primer paso es la creación de la estructura. Para ello se han seguido los si
 ```sudo apt install dosbox```
 * **Configuración del entorno:** Debemos acceder con el comando ```dosbox``` al entorno. A continuación, debemos seguir varios pasos
   Para que dosbox reconozca nuestros archivos, debemos vincular la carpeta que tenemos albergada en el directorio home con el comando
-```mount c ~/DOSBOX``` 
+```mount c ~/DOSBOX```
+Configuramos el teclado con el comando `keyb sp`, activando la distribución e español. 
 Debemos premitir que el sistema reconozca los comandos del compilador desde cualquier sitio, configurando el entorno Borland
 ```set PATH=%PATH%;C:\BC\BIN```
 Este comando permite ejecutar el ensamblador y el enlazador desde cualquier ubicación.
