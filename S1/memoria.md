@@ -43,7 +43,7 @@ En este caso, he descargado una versión del juego clásico del Tetris de una pl
 
     
 **2. Uso del entorno Borland: diseño del programa ```hola.asm```** 
-Este ejemplo imprime el mensaje "Hola Mundo" en bucle siete veces. Para ello, se crea el archivo fuente  [hola.asm](./ejemplos/hola.asm) y con la ayuda de  ```tasm hola.asm``` generamos el archivo objeto. Por otro lado  ```tslink hola.obj``` nos permite crear el ejecutable ```HOLA.EXE```. Por último, se ejecuta el programa y se verifica que la salida por pantalla muestra el mensaje indicado 7 veces exactas.  
+Este ejemplo imprime el mensaje "Hola Mundo" en bucle siete veces. Para ello, se crea el archivo fuente  [hola.asm](./ejemplos/hola.asm) y con la ayuda de  ```tasm hola.asm``` generamos el archivo objeto. Por otro lado  ```tlink hola.obj``` nos permite crear el ejecutable ```HOLA.EXE```. Por último, se ejecuta el programa y se verifica que la salida por pantalla muestra el mensaje indicado 7 veces exactas.  
 
 <p align="center">
   <img src="img_memoria/hola_mundo.png" width="500">
