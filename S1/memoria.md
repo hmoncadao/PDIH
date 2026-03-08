@@ -9,7 +9,7 @@ El primer paso es la creación de la estructura. Para ello se han seguido los si
                            
 * **Organización:** Se copiaron las carpetas `BC` (compilador) y `P1ej` (carpeta de ejemplo) dentro de la estructura. Se debe tener en cuenta que los nombres tengan un límite de 8 caracteres.                           
 <p align="center">
-  <img src="img_memoria/carpeta_doxbox.png" width="500">
+  <img src="img_memoria/carpeta_dosbox.png" width="500">
 </p>
 
 * **Instalación del emulador:** Instalamos según el sistema operativo Linux, para lo que se usó el siguiente comando: 
