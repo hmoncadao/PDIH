@@ -8,7 +8,7 @@ El primer paso es la creación de la estructura. Para ello se han seguido los si
 * **Instalación del emulador:** Instalamos según el sistema operativo Linux, para lo que se usó el siguiente comando: 
 ```sudo apt install dosbox```
 * **Configuración del entorno:** Debemos acceder con el comando ```dosbox``` al entorno.        
-![DosBox](img_memoria/dosbox.png)  )  
+![DosBox](img_memoria/dosbox.png)    
 
 A continuación, debemos seguir varios pasos    
 Para que dosbox reconozca nuestros archivos, debemos vincular la carpeta que tenemos albergada en el directorio home con el comando    
