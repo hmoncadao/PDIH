@@ -31,7 +31,7 @@ Este comando permite ejecutar el ensamblador y el enlazador desde cualquier ubic
 A continuación, para verificar que realmente el entorno es funcional, probaremos varios métodos.
     
 **1. Ejecución de aplicaciones clasicas de MS-DOS**    
-En este caso, he descargado una versión del juego clásico del Tetris de una plataforma online. La carpeta con todo el código fuente y ejecutables se ubica en la carpeta de nuestro directorio home. A continuación, para ejecutar el juego, escribimos  ```tetris ``` y lo ponemos a funcionar.    
+En este caso, he descargado una versión del juego clásico del Tetris de una plataforma online. La carpeta con todo el código fuente y ejecutables se ubica en la carpeta de nuestro directorio home. A continuación, para ejecutar el juego, escribimos  ```tetris``` y lo ponemos a funcionar.    
 
 <p align="center">
   <img src="img_memoria/carpeta_tetris.png" width="500">
