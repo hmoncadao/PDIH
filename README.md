@@ -11,7 +11,7 @@
 
 ### Índice
 #### Seminarios ####
-[sem 1](./S1) **S1 —**  Seminario 1. Programación de dispositivos a bajo nivel    
+[**S1 —**](./S1) Seminario 1. Programación de dispositivos a bajo nivel    
 **S-LKM —** Seminario. Módulos cargables del kernel (LKM)
 
 #### Prácticas
