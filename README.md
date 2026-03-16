@@ -10,7 +10,7 @@
 ---
 
 ### Índice
-<h2 style="color:#1E90FF;">Seminarios</h2>
+<h2 style="color:#1E90FF;">Seminarios</h2>    
 [**S1**](./S1) **—** Seminario 1. Programación de dispositivos a bajo nivel    
 **S-LKM —** Seminario. Módulos cargables del kernel (LKM)    
 
