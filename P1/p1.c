@@ -199,33 +199,49 @@ int main() {
                 scanf("%d", &opcion);
                 textcolor(opcion); 
                 
-                printf("Escribe un caracter: ");
-                fflush(stdin);
-                x = mi_getchar();
-                
-                gotoxy(10, 15); 
-                cputchar((char)x); 
-                
+                printf("Escribe una frase: ");
+                fflush(stdin);{
+
+                    char frase[80];
+                    int i;
+                    int fila = 18;    
+                    int columna = 15;
+                    
+                    gets(frase); 
+
+                    //Escribir la frase
+                    for(i = 0; frase[i] != '\0'; i++) {
+                        gotoxy(columna + i, fila); 
+                        cputchar(frase[i]);
+                    }
+                }
+            
                 gotoxy(0, 22);
-                printf("Mira en el centro de la pantalla. Pulsa tecla...");
-                getch();
+                printf("Mira el texto en la parte inferior. Pulsa tecla...");
+                pausa();
                 break;
 
             case 6:
                 printf("Color de FONDO (0-7): ");
                 scanf("%d", &opcion);
                 textbackground(opcion);
-                
-                printf("Escribe un caracter: ");
-                fflush(stdin);
-                x = mi_getchar();
-                
-                gotoxy(10, 16);
-                cputchar((char)x); 
-                
-                gotoxy(0, 22);
-                printf("Mira el resultado arriba. Pulsa tecla...");
-                getch();
+
+                printf("Escribe la frase: ");
+                fflush(stdin);{
+                    char frase[80];
+                    int i;
+                    gets(frase); 
+
+                    //Escribir la frase
+                    for(i = 0; frase[i] != '\0'; i++) {
+                        gotoxy(10 + i, 20); 
+                        cputchar(frase[i]);
+                    }
+                }
+
+                gotoxy(0, 24);
+                printf("Fondo aplicado. Pulsa una tecla...");
+                pausa();
                 break;
 
             case 7:
@@ -233,10 +249,8 @@ int main() {
                 pausa();
                 
                 setvideomode(0x13); 
-                
-                for(x = 0; x < 100; x++) {
-                    pixel(x, 50, 10);      // Linea verde en la fila 50
-                }
+    
+                pixel(x, 50, 10);      
                 
                 gotoxy(0, 10); 
                 printf("Dibujo listo. Pulsa tecla para volver a modo texto...");
@@ -298,7 +312,6 @@ int main() {
                 printf("Opcion invalida.\n");
                 getch();
         }
-        
         
     } while(opcion != 0);
     
