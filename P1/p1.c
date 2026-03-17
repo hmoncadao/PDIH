@@ -171,6 +171,7 @@ int main() {
         printf("6. TEXTBACKGROUND - Modificar el color de fondo (Usa cputchar)\n");
         printf("7. PIXEL - Poner un pixel en una posicion determinada\n");
         printf("8. GETCHE - Obtener un caracter de teclado y mostrarlo en pantalla\n");
+        printf("9. CLRSCR - Limpiar la pantalla\n");
         printf("0. Salir\n");
         printf("Selecciona una opcion: ");
         scanf("%d", &opcion); 
@@ -279,7 +280,13 @@ int main() {
                 printf("\n\nHas pulsado: %c. Pulsa otra tecla para volver al menu...", (char)x);
                 pausa(); 
                 break;
-
+            
+            case 9:
+                clrscr();
+                printf("Pantalla limpia. Pulsa cualquier tecla para volver al menu...");
+                pausa();
+                break;
+                
             case 0:
                 printf("Saliendo...\n");
                 break;
