@@ -1,25 +1,8 @@
-#include <stdio.h>    
-#include <dos.h>      
-#include <conio.h>    
+#include "p1.h"  
 
 unsigned int fondo = 0; // Negro
 unsigned int texto = 7; // Blanco/gris
 
-//Funciones 
-int mi_getchar(void);
-void clrscr(void);
-void setcursortype(int tipo_cursor);
-void setvideomode(int mode);
-void gotoxy(int x, int y);
-void textcolor(int nuevo_color);
-void textbackground(int nuevo_color);
-void cputchar(char c);
-void pixel(int x, int y, unsigned char c); 
-void pausa(void);                         
-
-//Funciones auxiliares
-
-// Obtiene un carácter de teclado 
 int mi_getchar(){
     union REGS inregs, outregs;
     int caracter;
@@ -31,7 +14,6 @@ int mi_getchar(){
     return caracter;
 }
 
-// Escribe un carácter en pantalla 
 void mi_putchar(char c){
     union REGS inregs, outregs;
     
@@ -40,7 +22,6 @@ void mi_putchar(char c){
     int86(0x21, &inregs, &outregs);
 }
 
-//Borra toda la pantalla
 void clrscr(){
     union REGS inregs, outregs;
     inregs.h.ah = 0x06;
@@ -59,7 +40,6 @@ void clrscr(){
     int86(0x10, &inregs, &outregs);
 }
 
-//Fijar el aspecto del cursor, debe admitir tres valores: INVISIBLE, NORMAL y GRUESO
 void setcursortype(int tipo_cursor){
     union REGS inregs, outregs;
     inregs.h.ah = 0x01;
@@ -80,14 +60,12 @@ void setcursortype(int tipo_cursor){
     int86(0x10, &inregs, &outregs);
 }
 
-// Hace una pausa
 void pausa(){
     union REGS inregs, outregs;
     inregs.h.ah = 0x00;
     int86(0x16, &inregs, &outregs);
 }
 
-// Establece el modo de vídeo: 3-texto, 4-gráfico
 void setvideomode(int mode){
     union REGS inregs, outregs;
     inregs.h.ah = 0x00; 
@@ -95,7 +73,6 @@ void setvideomode(int mode){
     int86(0x10, &inregs, &outregs);
 }
 
-// Pone un pixel en la coordenada X,Y de color C
 void pixel(int x, int y, unsigned char c){
     union REGS inregs, outregs;
     inregs.x.cx = x;
@@ -105,7 +82,6 @@ void pixel(int x, int y, unsigned char c){
     int86(0x10, &inregs, &outregs);
 }
 
-//Colocar el cursor en una posición determinada
 void gotoxy(int x, int y){
     union REGS r;
     r.h.ah = 0x02; 
@@ -116,7 +92,6 @@ void gotoxy(int x, int y){
     int86(0x10, &r, &r); 
 }
 
-//Obtiene el modo de video actual
 int getvideomode(void){
     union REGS inregs, outregs;
     inregs.h.ah = 0x0F;
@@ -124,7 +99,6 @@ int getvideomode(void){
     return outregs.h.al; 
 }
 
-// Escribe un carácter con el color actual (texto y fondo)
 void cputchar(char c) {
     union REGS inregs, outregs;
     unsigned char atributo;
@@ -141,17 +115,14 @@ void cputchar(char c) {
     int86(0x10, &inregs, &outregs);
 }
 
-// Modifica el color de primer plano (letras)
 void textcolor(int nuevo_color) {
     texto = nuevo_color & 0x0F; // Aseguramos que solo use 4 bits (0-15)
 }
 
-// Modifica el color de fondo
 void textbackground(int nuevo_color) {
     fondo = nuevo_color & 0x07; // El fondo estándar solo admite 3 bits (0-7)
 }
 
-// Obtiene un carácter de teclado y lo muestra en pantalla
 int getche(void) {
     return mi_getchar();
 }
@@ -172,6 +143,9 @@ int main() {
         printf("7. PIXEL - Poner un pixel en una posicion determinada\n");
         printf("8. GETCHE - Obtener un caracter de teclado y mostrarlo en pantalla\n");
         printf("9. CLRSCR - Limpiar la pantalla\n");
+        printf("10. DIBUJAR RECUADRO - Dibujar un recuadro en la pantalla en modo texto\n");
+        printf("11. MODO CGA - Dibujar en modo grafico CGA (320x200, 4 colores)\n");
+        printf("12. ASCII ART - Dibujo sencillo de tipo “ascii art”\n");
         printf("0. Salir\n");
         printf("Selecciona una opcion: ");
         scanf("%d", &opcion); 
@@ -285,6 +259,35 @@ int main() {
                 clrscr();
                 printf("Pantalla limpia. Pulsa cualquier tecla para volver al menu...");
                 pausa();
+                break;
+            
+            case 10:
+                clrscr();
+                printf("Requisito ampliado: Dibujar un recuadro en modo texto.\n");
+                
+                // 15 (Blanco) y 1 (Azul)
+                dibujarRecuadro(10, 5, 40, 15, 15, 1); 
+                
+                gotoxy(12, 10);
+                gotoxy(0, 22);
+
+                printf("Pulsa una tecla para volver al menu...");
+                getch(); 
+                break;
+            
+            case 11:
+                clrscr();
+                printf("Requisito ampliado: Dibujar en modo grafico CGA (320x200, 4 colores).\n");
+                
+                modoCGA(); 
+                
+                gotoxy(0, 22);
+                printf("Pulsa una tecla para volver al menu...");
+                getch(); 
+                break;
+
+            case 12:
+                asciiArt();
                 break;
                 
             case 0:
