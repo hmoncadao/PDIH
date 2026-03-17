@@ -1,7 +1,10 @@
 # Práctica 1 - Entrada/Salida utilizando interrupciones con lenguaje C
 ---
-En esta primera práctica, se implementa un conjunto de funciones (en lenguaje C) relacionada con la E/S mediante interrupciones sowftware (control del crusor, gestión de colores en pantalla...). Todas estas funciones, se pueden probar en [el fichero principal](/p1.c), donde se permite ver el funcionamente de estas de manera interactiva, usando una estructura `switch`.    
-Los ficheros se dividen en aquellos de naturaleza obligatoria (requisitos mínimos) cuya implementación se encuentra en [](/p1.c) y los requisitos opcionales, en [](/p1_op.c).
+
+En esta primera práctica, se implementa un conjunto de funciones (en lenguaje C) relacionada con la E/S mediante interrupciones sowftware (control del crusor, gestión de colores en pantalla...). Todas estas funciones, se pueden probar en [el fichero principal](/p1.c), donde se permite ver el funcionamente de estas de manera interactiva, usando una estructura `switch`.       
+    
+Los ficheros se dividen en aquellos de naturaleza obligatoria (requisitos mínimos) cuya implementación se encuentra en [p1.c](/p1.c) y los requisitos opcionales, en [p1_op.c](/p1_op.c).    
+
 ---
 ## Requisitos mínimos
 1. `gotoxy()`: Coloca el cursor en una posición determinada.
