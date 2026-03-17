@@ -7,51 +7,51 @@ Los ficheros se dividen en aquellos de naturaleza obligatoria (requisitos mínim
 
 ---
 ## Requisitos mínimos
-1. `gotoxy()`: Coloca el cursor en una posición determinada.        
+1.**`gotoxy()`**: Coloca el cursor en una posición determinada.        
 <p align="center">
   <img src="img_memoria/gotoxy.png" width="500">
 </p>        
 
-2. `setcursortype()`: Fija el aspecto del cursor, debe admitir tres valores: INVISIBLE, NORMAL y GRUESO.        
+2. **`setcursortype()`**: Fija el aspecto del cursor, debe admitir tres valores: INVISIBLE, NORMAL y GRUESO.        
 <p align="center">
   <img src="img_memoria/cursor.png" width="500">
 </p>
 
-3. `setvideomode()`: Fija el modo de video deseado.
+3. **`setvideomode()`**: Fija el modo de video deseado.
 <p align="center">
   <img src="img_memoria/videomode.png" width="500">
 </p>        
 
-4. `getvideomode()`: Obtiene el modo de video actual.        
+4. **`getvideomode()`**: Obtiene el modo de video actual.        
 <p align="center">
   <img src="img_memoria/getvideo.png" width="500">
 </p>
    
-5. `textcolor()`: Modifica el color de primer plano con que se mostrarán los caracteres.        
+5. **`textcolor()`**: Modifica el color de primer plano con que se mostrarán los caracteres.        
 <p align="center">
   <img src="img_memoria/textocolor.png" width="500">
 </p>
    
-6. `textbackground()`: Modifica el color de fondo con que se mostrarán los caracteres.
+6. **`textbackground()`**: Modifica el color de fondo con que se mostrarán los caracteres.
 <p align="center">
   <img src="img_memoria/textoback.png" width="500">
 </p>
 
-7. `clrscr()`: Borra toda la pantalla.
+7. **`clrscr()`**: Borra toda la pantalla.
 <p align="center">
   <img src="img_memoria/clear1.png" width="400">
   <img src="img_memoria/clear2.png" width="400">
 </p>
 
-8. `cputchar()`: Escribe un carácter en pantalla con el color indicado actualmente.
+8. **`cputchar()`**: Escribe un carácter en pantalla con el color indicado actualmente.
 Esta función se usa como complementaria en varias de las funciones. Para comprobarlo se recomienda visitar el código fuente [p1.h](/p1.h).
 
-9. `getche()`: Obtiene un carácter de teclado y lo muestra en pantalla.        
+9. **`getche()`**: Obtiene un carácter de teclado y lo muestra en pantalla.        
 <p align="center">
   <img src="img_memoria/getche.png" width="500">
 </p>
 
-10. `pixel()`: Dibujar un pixel en modo gráfico (la función recibirá la coordinada x,y y el color del punto.        
+10. **`pixel()`**: Dibujar un pixel en modo gráfico (la función recibirá la coordinada x,y y el color del punto.        
 <p align="center">
   <img src="img_memoria/pixel1.png" width="400">
   <img src="img_memoria/pixel2.png" width="400">
@@ -59,21 +59,20 @@ Esta función se usa como complementaria en varias de las funciones. Para compro
 
 ---
 ## Requisitos ampliados
-1. `dibujarRecuadro()`: Dibujar un recuadro en la pantalla en modo texto.        
+1. **`dibujarRecuadro()`**: Dibujar un recuadro en la pantalla en modo texto.        
 <p align="center">
   <img src="img_memoria/recuadro1.png" width="400">
   <img src="img_memoria/recuadro2.png" width="400">
 </p>
 
-2. `modoCGA()`: Establecer modo gráfico CGA (modo=4) para crear dibujos.        
+2. **`modoCGA()`**: Establecer modo gráfico CGA (modo=4) para crear dibujos.        
 <p align="center">
   <img src="img_memoria/cga1.png" width="400">
   <img src="img_memoria/cga2.png" width="400">
 </p>
 
-4. `asciiArt()`: Dibujo sencillo de tipo “ascii art”// Dibujo sencillo de tipo “ascii art”.        
+3. **`asciiArt()`**: Dibujo sencillo de tipo “ascii art”.       
 <p align="center">
   <img src="img_memoria/ascii1.png" width="400">
   <img src="img_memoria/ascii2.png" width="400">
 </p>
----
