@@ -1,0 +1,296 @@
+#include <stdio.h>    
+#include <dos.h>      
+#include <conio.h>    
+
+unsigned int fondo = 0; // Negro
+unsigned int texto = 7; // Blanco/gris
+
+//Funciones 
+int mi_getchar(void);
+void clrscr(void);
+void setcursortype(int tipo_cursor);
+void setvideomode(int mode);
+void gotoxy(int x, int y);
+void textcolor(int nuevo_color);
+void textbackground(int nuevo_color);
+void cputchar(char c);
+void pixel(int x, int y, unsigned char c); 
+void pausa(void);                         
+
+//Funciones auxiliares
+
+// Obtiene un carácter de teclado 
+int mi_getchar(){
+    union REGS inregs, outregs;
+    int caracter;
+
+    inregs.h.ah = 1;
+    int86(0x21, &inregs, &outregs);
+    
+    caracter = outregs.h.al;
+    return caracter;
+}
+
+// Escribe un carácter en pantalla 
+void mi_putchar(char c){
+    union REGS inregs, outregs;
+    
+    inregs.h.ah = 2;
+    inregs.h.dl = c;
+    int86(0x21, &inregs, &outregs);
+}
+
+//Borra toda la pantalla
+void clrscr(){
+    union REGS inregs, outregs;
+    inregs.h.ah = 0x06;
+    inregs.h.al = 0;
+    inregs.h.ch = 0;
+    inregs.h.cl = 0;
+    inregs.h.dh = 24;
+    inregs.h.dl = 79;
+    inregs.h.bh = 0x07;
+    int86(0x10, &inregs, &outregs);
+    
+    inregs.h.ah = 0x02;
+    inregs.h.bh = 0x00;
+    inregs.h.dh = 0;
+    inregs.h.dl = 0;
+    int86(0x10, &inregs, &outregs);
+}
+
+//Fijar el aspecto del cursor, debe admitir tres valores: INVISIBLE, NORMAL y GRUESO
+void setcursortype(int tipo_cursor){
+    union REGS inregs, outregs;
+    inregs.h.ah = 0x01;
+    switch(tipo_cursor){
+        case 0: //invisible
+            inregs.h.ch = 0x20;
+            inregs.h.cl = 0x00;
+            break;
+        case 1: //normal
+            inregs.h.ch = 0x06;
+            inregs.h.cl = 0x07;
+            break;
+        case 2: //grueso
+            inregs.h.ch = 0x00;
+            inregs.h.cl = 0x07;
+            break;
+    }
+    int86(0x10, &inregs, &outregs);
+}
+
+// Hace una pausa
+void pausa(){
+    union REGS inregs, outregs;
+    inregs.h.ah = 0x00;
+    int86(0x16, &inregs, &outregs);
+}
+
+// Establece el modo de vídeo: 3-texto, 4-gráfico
+void setvideomode(int mode){
+    union REGS inregs, outregs;
+    inregs.h.ah = 0x00; 
+    inregs.h.al = (unsigned char)mode;
+    int86(0x10, &inregs, &outregs);
+}
+
+// Pone un pixel en la coordenada X,Y de color C
+void pixel(int x, int y, unsigned char c){
+    union REGS inregs, outregs;
+    inregs.x.cx = x;
+    inregs.x.dx = y;
+    inregs.h.al = c;
+    inregs.h.ah = 0x0C;
+    int86(0x10, &inregs, &outregs);
+}
+
+//Colocar el cursor en una posición determinada
+void gotoxy(int x, int y){
+    union REGS r;
+    r.h.ah = 0x02; 
+    r.h.bh = 0x00; 
+    r.h.dh = (unsigned char)y; 
+    r.h.dl = (unsigned char)x; 
+    
+    int86(0x10, &r, &r); 
+}
+
+//Obtiene el modo de video actual
+int getvideomode(void){
+    union REGS inregs, outregs;
+    inregs.h.ah = 0x0F;
+    int86(0x10, &inregs, &outregs); 
+    return outregs.h.al; 
+}
+
+// Escribe un carácter con el color actual (texto y fondo)
+void cputchar(char c) {
+    union REGS inregs, outregs;
+    unsigned char atributo;
+
+    // Juntamos los dos estados globales en un solo byte de atributo
+    atributo = (unsigned char)((fondo << 4) | (texto & 0x0F));
+
+    inregs.h.ah = 0x09;          
+    inregs.h.al = c;             
+    inregs.h.bh = 0x00;          
+    inregs.h.bl = atributo;      
+    inregs.x.cx = 1;             
+
+    int86(0x10, &inregs, &outregs);
+}
+
+// Modifica el color de primer plano (letras)
+void textcolor(int nuevo_color) {
+    texto = nuevo_color & 0x0F; // Aseguramos que solo use 4 bits (0-15)
+}
+
+// Modifica el color de fondo
+void textbackground(int nuevo_color) {
+    fondo = nuevo_color & 0x07; // El fondo estándar solo admite 3 bits (0-7)
+}
+
+// Obtiene un carácter de teclado y lo muestra en pantalla
+int getche(void) {
+    return mi_getchar();
+}
+
+int main() {
+    int opcion;
+    int x, y;
+    
+    do {
+        clrscr();
+        printf("Menu\n");
+        printf("1. GOTOXY - Colocar el cursor en una posicion determinada\n");
+        printf("2. SETCURSORTYPE - Fijar el aspecto del cursor\n");
+        printf("3. SETVIDEOMODE - Fijar el modo de video deseado\n");
+        printf("4. GETVIDEOMODE - Obtener el modo de video actual\n");
+        printf("5. TEXTCOLOR - Modificar el color de primer plano (Usa cputchar)\n");
+        printf("6. TEXTBACKGROUND - Modificar el color de fondo (Usa cputchar)\n");
+        printf("7. PIXEL - Poner un pixel en una posicion determinada\n");
+        printf("8. GETCHE - Obtener un caracter de teclado y mostrarlo en pantalla\n");
+        printf("0. Salir\n");
+        printf("Selecciona una opcion: ");
+        scanf("%d", &opcion); 
+        fflush(stdin);
+        
+        switch(opcion) {
+            case 1:
+                printf("Ingresa la columna (x): ");
+                scanf("%d", &x);
+                printf("Ingresa la fila (y): ");
+                scanf("%d", &y);
+                
+                gotoxy(x, y);
+                printf("x(%d,%d)", x, y);
+                
+                gotoxy(0, 22); 
+                printf("\nPulsa cualquier tecla para volver al menu...");
+                getch();
+                break;
+            
+            case 2:
+                printf("Ingresa el tipo de cursor (0: Invisible, 1: Normal, 2: Grueso): ");
+                scanf("%d", &opcion);
+
+                setcursortype(opcion);
+
+                printf("\nObserva el cursor ahora. Pulsa una tecla para continuar...");
+                
+                gotoxy(10, 10);   
+                pausa();          
+
+                gotoxy(0, 22);    
+                printf("\nPulsa cualquier tecla para volver al menu...");
+                pausa();          
+                break;
+            
+            case 3:
+                printf("Ingresa el modo de video (ej. 3 para texto): ");
+                scanf("%x", &opcion);
+                setvideomode(opcion);
+                break;
+            
+            case 4:
+                printf("El modo de video actual es: 0x%02X\n", getvideomode());
+                printf("\nPulsa cualquier tecla para volver al menu...");
+                getch();
+                break;
+            
+            case 5:
+                printf("Color de TEXTO (0-15): ");
+                scanf("%d", &opcion);
+                textcolor(opcion); 
+                
+                printf("Escribe un caracter: ");
+                fflush(stdin);
+                x = mi_getchar();
+                
+                gotoxy(10, 15); 
+                cputchar((char)x); 
+                
+                gotoxy(0, 22);
+                printf("Mira en el centro de la pantalla. Pulsa tecla...");
+                getch();
+                break;
+
+            case 6:
+                printf("Color de FONDO (0-7): ");
+                scanf("%d", &opcion);
+                textbackground(opcion);
+                
+                printf("Escribe un caracter: ");
+                fflush(stdin);
+                x = mi_getchar();
+                
+                gotoxy(10, 16);
+                cputchar((char)x); 
+                
+                gotoxy(0, 22);
+                printf("Mira el resultado arriba. Pulsa tecla...");
+                getch();
+                break;
+
+            case 7:
+                printf("Cambiando a modo grafico 0x13 (320x200)...\n");
+                pausa();
+                
+                setvideomode(0x13); 
+                
+                for(x = 0; x < 100; x++) {
+                    pixel(x, 50, 10);      // Linea verde en la fila 50
+                }
+                
+                gotoxy(0, 10); 
+                printf("Dibujo listo. Pulsa tecla para volver a modo texto...");
+                
+                pausa();            
+                setvideomode(0x03); // Modo texto
+                break;
+
+            case 8:
+                printf("\nEscribe un caracter: ");
+                fflush(stdin);
+                
+                x = getche(); 
+                
+                printf("\n\nHas pulsado: %c. Pulsa otra tecla para volver al menu...", (char)x);
+                pausa(); 
+                break;
+
+            case 0:
+                printf("Saliendo...\n");
+                break;
+            
+            default:
+                printf("Opcion invalida.\n");
+                getch();
+        }
+        
+        
+    } while(opcion != 0);
+    
+    return 0;
+}
