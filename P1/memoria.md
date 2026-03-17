@@ -71,7 +71,7 @@ Esta función se usa como complementaria en varias de las funciones. Para compro
   <img src="img_memoria/cga2.png" width="400">
 </p>
 
-3. **`asciiArt()`**: Dibujo sencillo de tipo “ascii art”// Dibujo sencillo de tipo “ascii art”.        
+3. **`asciiArt()`**: Dibujo sencillo de tipo “ascii art”.       
 <p align="center">
   <img src="img_memoria/ascii1.png" width="400">
   <img src="img_memoria/ascii2.png" width="400">
