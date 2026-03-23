@@ -15,4 +15,5 @@
 **S-LKM —** Seminario. Módulos cargables del kernel (LKM)    
 
 * ### Prácticas
-[**P1**](./P1) **—** Práctica 1. Entrada / Salida utilizando interrupciones con lenguaje C 
+[**P1**](./P1) **—** Práctica 1. Entrada / Salida utilizando interrupciones con lenguaje C     
+**P2—** Práctica 2. Uso de bibliotecas de programación de interfaces de usuario en modo texto    
