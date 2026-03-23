@@ -7,7 +7,7 @@ Para ello, hemos probado varios ejemplos propuestos por el profesor. Además, he
 ---
 
 ## Pruebas con la librería `ncurses`
-
+Antes de desarrollar la lógica completa del juego, se realizaron una serie de experimentos para familiarizarse con las funciones de dibujo, refresco y movimiento en modo texto, que más tarde, completarían los cimientos del juego. Los archivos fuentes han sido proporcionados por el profesor. 		
 
 --- 
 
@@ -54,21 +54,21 @@ De esta manera, el usuario debe pulsar la `Barra Espaciadora` para ir saltando l
 4. **Finalización**. Al producirse una colisión, aparece la pantalla de "Game Over", donde el usuario podrá comenzar una partida nueva (si pulsa `s`) o salir del juego (pulsando `n`), de manera que regresa a la línea de comandos.		
 
 ---
-Por lo tanto, presento a continuación 
+Por lo tanto, presento a continuación los requisitos que se solicitan en esta práctica, tanto de carácter obligatorio como aquellos que son opcionales. 		
 
 ## Requisitos mínimos
 **1. Programas de ejemplo -** Instalación de ncurses y creación de los programas de ejemplo ofrecidos en el guion de la práctica.		
 
 Los dos ejemlos que se presentan son: 		
-* Mostrar una ventana en el terminar		
+* Mostrar una ventana en la terminal ([ventana.c](ejemplos/ventana.c))		
 En lugar de usar toda la pantalla de la terminal, definimos un recuadro de tamaño fijo, el cual encerramos con colores y bordes. De esta manera, hacemos que el juego o cualquier mensaje se vea más claro, uniforme y profesional. 		
 
-* Mover una "pelotita" en pantalla 	
+* Mover una "pelotita" en pantalla  ([pelotita.c](ejemplos/pelotita.c))		
 La pelotita se va moviendo por la terminal. Este movimiento realmente dibujar la pelotita en nuevas posiciones e ir limpiando la pantalla. Al hacerlo muchas veces por segundo, se genera el "movimiento". El ritmo se controla con `usleep`, que con un `DELAY` es capaz de generar el desplazamiento de manera más lenta.		
 
 <p align="center">
   <img src="img_memoria/ventana.png" width="400">
-  <img src="img_memoria/pelotita-salto.png" width="400">
+  <img src="img_memoria/pelotita.png" width="400">
 </p>		
 
 Estas dos ideas que se nos presentan como ejemplo son la base del cualquier juego que vayamos a crear.		
