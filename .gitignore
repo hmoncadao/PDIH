@@ -1,0 +1,11 @@
+*.o
+*.exe
+*.out
+.vscode/
+.history/
+*.swp
+*.save
+.DS_Store
+Thumbs.db
+*~
+*.bak

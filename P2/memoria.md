@@ -57,10 +57,10 @@ De esta manera, el usuario debe pulsar la `Barra Espaciadora` para ir saltando l
 Por lo tanto, presento a continuación 
 
 ## Requisitos mínimos
-1. Programas de ejemplo	- Instalación de ncurses y creación de los programas de ejemplo ofrecidos en el guion de la práctica. 			
+**1. Programas de ejemplo	-** Instalación de ncurses y creación de los programas de ejemplo ofrecidos en el guion de la práctica. 			
 
 
-2. Juego sencillo - Dino. Implementación de un juego sencillo partiendo del movimiento de la pelotita (juego tipo "pong").	
+**2. Juego sencillo: Dino -** Implementación de un juego sencillo partiendo del movimiento de la pelotita (juego tipo "pong").	
 
 <p align="center">
   <img src="img_memoria/dino.png" width="400">
@@ -69,13 +69,13 @@ Por lo tanto, presento a continuación
 
 ---
 ## Requisitos ampliados
-1. Pantalla de Bienvenida - Al iniciar el juego se muestra una pantalla donde se muestran los datos personales y los controles del juego. Tras pulsar una tecla, comienza el juego. 				
+**1. Pantalla de Bienvenida -** Al iniciar el juego se muestra una pantalla donde se muestran los datos personales y los controles del juego. Tras pulsar una tecla, comienza el juego. 				
 
 <p align="center">
   <img src="img_memoria/intro-dino.png" width="500">
 </p>
 
-2. Pantalla Final - Al terminar cada partida, se muestra una pantalla resumen con el marcador (score) final y una felicitación al jugador. Además, se da la opción de volver a jugar o terminar el programa. 
+**2. Pantalla Final -** Al terminar cada partida, se muestra una pantalla resumen con el marcador (score) final y una felicitación al jugador. Además, se da la opción de volver a jugar o terminar el programa. 
 
 <p align="center">
   <img src="img_memoria/dino-final.jpeg" width="500">
