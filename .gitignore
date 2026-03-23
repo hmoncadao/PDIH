@@ -9,3 +9,13 @@
 Thumbs.db
 *~
 *.bak
+
+# Ignorar todos los archivos que no tengan punto en el nombre (ejecutables)
+*
+!*/
+!*.*
+!Makefile
+!README
+
+bin/
+build/
