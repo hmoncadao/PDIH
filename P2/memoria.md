@@ -57,8 +57,21 @@ De esta manera, el usuario debe pulsar la `Barra Espaciadora` para ir saltando l
 Por lo tanto, presento a continuación 
 
 ## Requisitos mínimos
-**1. Programas de ejemplo	-** Instalación de ncurses y creación de los programas de ejemplo ofrecidos en el guion de la práctica. 			
+**1. Programas de ejemplo -** Instalación de ncurses y creación de los programas de ejemplo ofrecidos en el guion de la práctica.		
 
+Los dos ejemlos que se presentan son: 		
+* Mostrar una ventana en el terminar		
+En lugar de usar toda la pantalla de la terminal, definimos un recuadro de tamaño fijo, el cual encerramos con colores y bordes. De esta manera, hacemos que el juego o cualquier mensaje se vea más claro, uniforme y profesional. 		
+
+* Mover una "pelotita" en pantalla 	
+La pelotita se va moviendo por la terminal. Este movimiento realmente dibujar la pelotita en nuevas posiciones e ir limpiando la pantalla. Al hacerlo muchas veces por segundo, se genera el "movimiento". El ritmo se controla con `usleep`, que con un `DELAY` es capaz de generar el desplazamiento de manera más lenta.		
+
+<p align="center">
+  <img src="img_memoria/ventana.png" width="400">
+  <img src="img_memoria/pelotita-salto.png" width="400">
+</p>		
+
+Estas dos ideas que se nos presentan como ejemplo son la base del cualquier juego que vayamos a crear.		
 
 **2. Juego sencillo: Dino -** Implementación de un juego sencillo partiendo del movimiento de la pelotita (juego tipo "pong").	
 
