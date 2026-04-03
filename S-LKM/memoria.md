@@ -8,7 +8,7 @@ Debido a la recomendación del profesor, la realización de este seminario se ha
 
 ## Preparación del entorno
 A la hora de desarrollar módulos cargables, es imprescindible que nuestro sistema operativo esté preparado para compilar el código del núcleo. Para ello, instalaremos cabeceras de Linux (linux-headers).		
-* Actualizar los repositorios del sistema
+* **Actualizar los repositorios del sistema.**
 ```bash
 sudo apt-get update		
 ```
@@ -17,7 +17,7 @@ sudo apt-get update
 </p>
 
 
-* Instalación de las cabeceras correspondientes
+* **Instalación de las cabeceras correspondientes.**
 ```bash
 sudo apt-cache search linux-geaders-$(uname -r)
 sudo apt-get install linux-headers-$(uname -r)	
