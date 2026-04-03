@@ -8,16 +8,23 @@ Debido a la recomendación del profesor, la realización de este seminario se ha
 
 ## Preparación del entorno
 A la hora de desarrollar módulos cargables, es imprescindible que nuestro sistema operativo esté preparado para compilar el código del núcleo. Para ello, instalaremos cabeceras de Linux (linux-headers).		
-* Actualizar los repositorios del sistema				
-```sudo apt-get update```
-				
+* Actualizar los repositorios del sistema
+```bash
+sudo apt-get update		
+```
 <p align="center">
   <img src="img_memoria/update.png" width="500">
 </p>
 
-* Instalación de las cabeceras correspondientes		
-```sudo apt-cache search linux-geaders-$(uname -r)```		
-```sudo apt-get install linux-headers-$(uname -r)```				
+
+* Instalación de las cabeceras correspondientes
+```bash
+sudo apt-cache search linux-geaders-$(uname -r)		
+```
+
+```bash
+sudo apt-get install linux-headers-$(uname -r)	
+```			
 <p align="center">
   <img src="img_memoria/cache-get.png" width="500">
 </p>
@@ -47,11 +54,14 @@ sudo insmod hello.ko
 ```
 
 * **Listar los módulos:** Con este comando verificamos que el paso anterior tuvo éxito, ya que con lsmod leemos el contenido del archivo del sistema, filtrando solo aquello que contenga la palabra `hello`. En la salida vemos que efectivamente el LKM estáa vivo y reside en la memoria. 
-```lsmod | grep hello```
+```bash
+lsmod | grep hello		
+```
 
 * **Información del módulo.** Extraemos la información de las macros del código fuente, de manera que podemos examinar los metadatos del archivo antes o después de cargarlo.  
-
-```modinfo hello.ko```
+```bash
+modinfo hello.ko	
+```
 
 La salida de este comando es extensa, en la que vemos campos clave como `filename`, dnde vemos la ruta del archivo .ko, `description` o `author` (Derek Molloy), entre otros. 
 
@@ -60,14 +70,15 @@ La salida de este comando es extensa, en la que vemos campos clave como `filenam
 </p>
 
 * **Confirmar el funcionamiento.** Como los módulos del kernel no imprimen directamente los mensajes (por ejemplo usando un printf()), utilizan printk() para enviar información al registro del sistema. Por ello, usamos el siguiente comando para ver los mensajes que `helloBBB_init` y `helloBBB_exit` enviaron al log al usar `insmod` y `rmmmod`
-```sudo tail -n 10 /var/log/kern.log```
-
+```bash
+sudo tail -n 10 /var/log/kern.log	
+```
 
 <p align="center">
   <img src="img_memoria/tail.png" width="500">
 </p>
 
-Confirmamos con los mensajes 
+Confirmamos con los mensajes siguientes, que nos demuestran el éxito:
 
 ```2026-04-03T18:27:007... **EBB: Hello world from the BBB LKM!**```
 ```2026-04-03T18:30:56... **EBB: Goodbye world from BBB LKM!**```
