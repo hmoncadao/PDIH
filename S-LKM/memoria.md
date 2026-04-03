@@ -78,5 +78,6 @@ sudo tail -n 10 /var/log/kern.log
 
 Confirmamos con los mensajes siguientes, que nos demuestran el éxito:
 
-> 2026-04-03T18:27:007... **EBB: Hello world from the BBB LKM!**		
+> 2026-04-03T18:27:007... **EBB: Hello world from the BBB LKM!**
+> 	
 > 2026-04-03T18:30:56... **EBB: Goodbye world from BBB LKM!**		
