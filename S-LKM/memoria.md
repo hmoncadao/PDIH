@@ -2,13 +2,14 @@
 ---
 El objetivo principal de este seminario es aprender el funicionamiento de los módulos LKM en un entorno Linux. Concretamente, he trabajado con Ubuntu. Para ello, se configurará el sistema operativo con las cabeceras adecuadas para construir, cargar y descargar módulos sencillos, verificando su correcta ejecución.			
 	
-Debido a la recomendación del profesor, la realización de este seminario se ha llevado a cabo en una máquina virtual Ubuntu 24.04 gestionada a través de VirtualBox. Esto es debido al riesgo que conlleva ejectar módulos LKM directamente en el espacio del kernel de nuestra máquina Linux, debido a los elevados privilegios. Aseguramos así un entorno de pruebas aislado y seguro sin poner en riesgo la integridad de nuestros datos personales.		 		
+Debido a la recomendación del profesor, la realización de este seminario se ha llevado a cabo en una máquina virtual Ubuntu 24.04 gestionada a través de VirtualBox. Esto es debido al riesgo que conlleva ejectar módulos LKM directamente en el espacio del kernel de nuestra máquina Linux, debido a los elevados privilegios. Aseguramos así un entorno de pruebas aislado y seguro sin poner en riesgo la integridad de nuestros datos personales.		
+
 ---
 
 ## Preparación del entorno
 A la hora de desarrollar módulos cargables, es imprescindible que nuestro sistema operativo esté preparado para compilar el código del núcleo. Para ello, instalaremos cabeceras de Linux (linux-headers).		
 * Actualizar los repositorios del sistema				
-```sudo apt-get update
+```sudo apt-get update```
 				
 <p align="center">
   <img src="img_memoria/update.png" width="500">
@@ -23,7 +24,7 @@ A la hora de desarrollar módulos cargables, es imprescindible que nuestro siste
 
 
 ## Desarrollo del módulo
-El módulo desarrollado [hello.c](hello.c) deriva de un código de ejemplo facilitado por "derekmolloy" en su propio repositorio. Este no posee una función main(), sino que se registra y atiende peticiones.		 
+El módulo desarrollado [hello.c](hello.c) deriva de un código de ejemplo facilitado por "derekmolloy" en su propio repositorio. Este no posee una función main(), sino que se registra y atiende peticiones, permitiendo que el núcleo responda a eventos específicos. Se implementan funciones para la carga, descarga y limpieza del módulo, así como la comunición mediante logs (usando `printk()`). 		 
 
 ## Compilación
 Para compilar el módulo del kernel, no utilizamos un compilador clásico de C. En su lugar, creamos un [Makefile](Makefile) que interactúe con el sistema.		 
@@ -41,7 +42,8 @@ En mi caso, vemos el error `/bin/sh: 1: gcc-13: not found`. Este ocurre durante 
 
 * **Inserción del módulo.** Cargamos el archivo objeto en el espacio del núcleo. Requiere `sudo` al requerir un acceso al espacio del kernel. 
 
-```sudo insmod hello.ko```
+```bash
+sudo insmod hello.ko
 
 * **Listar los módulos:** Con este comando verificamos que el paso anterior tuvo éxito, ya que con lsmod leemos el contenido del archivo del sistema, filtrando solo aquello que contenga la palabra `hello`. En la salida vemos que efectivamente el LKM estáa vivo y reside en la memoria. 
 ```lsmod | grep hello```
