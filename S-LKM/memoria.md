@@ -43,7 +43,7 @@ En mi caso, vemos el error `/bin/sh: 1: gcc-13: not found`. Este ocurre durante 
 * **Inserción del módulo.** Cargamos el archivo objeto en el espacio del núcleo. Requiere `sudo` al requerir un acceso al espacio del kernel. 
 
 ```bash
-sudo insmod hello.ko
+sudo insmod hello.ko		
 
 * **Listar los módulos:** Con este comando verificamos que el paso anterior tuvo éxito, ya que con lsmod leemos el contenido del archivo del sistema, filtrando solo aquello que contenga la palabra `hello`. En la salida vemos que efectivamente el LKM estáa vivo y reside en la memoria. 
 ```lsmod | grep hello```
