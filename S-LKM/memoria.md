@@ -19,12 +19,10 @@ sudo apt-get update
 
 * Instalación de las cabeceras correspondientes
 ```bash
-sudo apt-cache search linux-geaders-$(uname -r)		
-```
-
-```bash
+sudo apt-cache search linux-geaders-$(uname -r)
 sudo apt-get install linux-headers-$(uname -r)	
-```			
+```
+		
 <p align="center">
   <img src="img_memoria/cache-get.png" width="500">
 </p>
@@ -80,5 +78,5 @@ sudo tail -n 10 /var/log/kern.log
 
 Confirmamos con los mensajes siguientes, que nos demuestran el éxito:
 
-```2026-04-03T18:27:007... **EBB: Hello world from the BBB LKM!**```
-```2026-04-03T18:30:56... **EBB: Goodbye world from BBB LKM!**```
+> 2026-04-03T18:27:007... **EBB: Hello world from the BBB LKM!**		
+> 2026-04-03T18:30:56... **EBB: Goodbye world from BBB LKM!**		
