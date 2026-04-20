@@ -20,11 +20,11 @@ sudo apt install arduino-core
 
 Todo esto se encuentra recogido en la carpeta individual de cada ejercicio, donde podemos ver todo tipo de detalles del funcionamiento de cada circuito individualmente. Podrás encontrar desde imagenes de la simulación, imagenes reales del montaje en la placa física, hasta videos y el código fuente que hace funcionar el experimento.  
 
-_*Visita mi [Panel de Circutios de Tinkercad] (https://www.tinkercad.com/dashboard/designs/all)._
+_*Visita mi [Panel de Circutios de Tinkercad]("https://www.tinkercad.com/dashboard/designs/all")._
   
 ---
 
-A continuación, se explicarán todos los ejercicios así como los materiales precisos para replicar los montajes y simulaciones. Se presuponen algunos elementos básicos y comunes para todos los ejercicios (todos pertenecientes al [Arduino Starter Kit] (https://robotopia.es/kits-educativos/103-arduino-starter-kit-castellano.html).
+A continuación, se explicarán todos los ejercicios así como los materiales precisos para replicar los montajes y simulaciones. Se presuponen algunos elementos básicos y comunes para todos los ejercicios (todos pertenecientes al [Arduino Starter Kit]("https://robotopia.es/kits-educativos/103-arduino-starter-kit-castellano.html").
 **Componentes Básicos:**    
 * Placa Arduino - Uno o Mega 2560
 * Breadboard Placa de prototipado
@@ -129,6 +129,8 @@ Para ver cómo sería el montaje físico resulta interesante visualizar las sigu
 * 1 LED 
 * 1 Resistencia de 10kΩ
 * 1 Resistencia de 220kΩ
+
+Este proyecto consiste en diseñar un circuito que mida la intensidad lumínima de un entorno ajustando automáticamente la respuesta de un LED. 
 
 ### Ejercicio 4 - Activación de un motor
 **Materiales:** 
