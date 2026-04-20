@@ -24,10 +24,22 @@ _*Visita mi [Panel de Circutios de Tinkercad] (https://www.tinkercad.com/dashboa
   
 ---
 
+A continuación, se explicarán todos los ejercicios así como los materiales precisos para replicar los montajes y simulaciones. Se presuponen algunos elementos básicos y comunes para todos los ejercicios (todos pertenecientes al [Arduino Starter Kit] (https://robotopia.es/kits-educativos/103-arduino-starter-kit-castellano.html).
+**Componentes Básicos:**    
+* Placa Arduino - Uno o Mega 2560
+* Breadboard Placa de prototipado
+* Cable USB para conexión al ordenador
+* Jumpers - Cables de conexión macho - macho
+
 ## 1. Ejercicios Obligatorios (Requisitos Mínimos)
 En esta sección explicaremos dos ejercicios que debemos realizar para cumplir los requisitos más básicos que se solicitane en esta práctica. Con estos, aprenderemos la utilidad y manejo de E/S digitales. 
 
 ### Ejercicio 1 - Parpadeo de LED
+**Materiales:** 
+* Componentes Básicos
+* 3 LEDs - Rojo Amarillo y verde
+* 3 Resistencias de 220kΩ    
+
 El primer ejercicio consiste en implementar un programa de parpadeo de LED que permita encender y apagar alternativamente tres LEDs de diferentes colores. Para ello, se nos propone una estructura y ciertas referencias para poder llevarlo a cabo. Concretamente, debemos usar las salidas digitales 11, 12 y 13 de Arduino y un intervalo de 1.5 segundos (1500 milisegundos). Los detalles se encuentran en el [código fuente]("img_fich/ej1/ej1.ino").
 
 <p align = "center"> Simulación del ejercicio 1 en Tinkercad.</p>
@@ -43,6 +55,12 @@ Una vez realizamos la simulación en la plataforma, así como el código fuente,
 </p>
 
 ### Ejercicio 2 - Parpadeo de LEDs con interruptor
+**Materiales:** 
+* Componentes Básicos
+* 3 LEDs - Rojo Amarillo y verde
+* 3 Resistencias de 220kΩ
+* 1 Pulsador o Interruptor
+
 Este ejercicio es una ampliación del programa anterior en el que se nos solicita introducir una lógica de control basada en un botón o interruptor (salida externa). Para ello, mantenemos la misma estructura y añaidmos un pulsador en la entrada digital 7. Lo que buscamos en este caso es que los LEDs amarillo y verde sigan el mismo funcionamiento que en el apartado 1, mientras que el LED rojo debe permanecer encendido cuando esté el botón pulsado y apagado en el resto de casos. La lógica de este experimento la encontramos en este [enlace]("img_fich/ej2/ej2.ino").
 
 Duplicamos el fichero de Tinkercad anterior, al cual le añadimos un pulsador, y obtenemos el siguiente modelo: 
@@ -64,6 +82,12 @@ El montaje en nuestra placa con los diferentes componentes electrónicos (LEDs, 
 El comienzo de estos ejercicios requiere la previa consolidación de los conceptos fundamentales que hemos trabajado y explicado en la parte "obligatoria". Ahora, exploraremos capacidades y componentes más avanzados de Arduino. Aumentaremos el nivel de complejidad técnica usando señales binarias y procesando señales de tiempo y control con actuadores mecánicos.  
 
 ### Ejercicio 1 - Secuencia de LEDs (_"El coche fantástico"_)
+**Materiales:** 
+* Componentes Básicos
+* 4 LEDs - Preferiblemente del mismo color
+* 4 Resistencias de 220kΩ
+* 1 Pulsador o Interruptor
+  
 Para resolver este apartado, debemos programar cuatro LEDs para que se enciendan y apaguen de forma consecutiva (efecto de barrido o ida y vuelta). Este efecto lo podemos ver en uno de los [videos]("https://bit.ly/3Lu7YNz") proporcionado por el profesor. La implementación la podemos consultar en la carpeta ([ej1_op]("https://bit.ly/3Lu7YNz")) asignada. 
 
 <p align = "center"> Simulación del ejercicio opcional 1 en Tinkercad.</p>
@@ -77,32 +101,39 @@ Podemos ver la estructura y montaje en las siguientes imagenes:
   <img src="img_fich/ej1_op/ej1_op_montaje2.jpeg" width="400">
 </p>
 
-
-
 ### Ejercicio 2 - Detector de la distancia a un objeto
+**Materiales:** 
+* Componentes Básicos
+* 1 Sensor de ultrasonidos - HC-SR04
+* 4 Buzzer (zumbador)
+* 1 Pulsador o Interruptor
+
+Este segundo ejercicio es muy interesante, ya que se basa en crear un sistema que permita mediante un sensor de ultrasonidos medir la distancia física entre el dispositivo y un obstáculo. Para ello, necesitaremos un zumbador (buzzer) que actúe como alerta o alarma acústica. Según la distancia del objeto, el "altavoz" emite un pitido diferente. Mediante la [implementación]("img_fich/ej2_op/ej2_op.ino") nos encargaremos de determinar el tiempo transcurrido para determinar la distancia exacta en centímetros. 
+
+<p align = "center"> Simulación del ejercicio opcional 2 en Tinkercad.</p>
+<p align="center">
+  <img src="img_fich/ej2_op/ej2_op_simulacion.png" width="500">
+</p>
+
+Para ver cómo sería el montaje físico resulta interesante visualizar las siguientes imágenes, así como visitar el [video de su funcionamiento]("img_fich/ej2_op/ej2_op_video.mp4"): 
+
+<p align="center">
+  <img src="img_fich/ej2_op/ej2_op_montaje1.jpeg" width="400">
+  <img src="img_fich/ej1_op/ej2_op_montaje2.jpeg" width="400">
+</p>
 
 ### Ejercicio 3 - Detector de la cantidad de luz
+**Materiales:** 
+* Componentes Básicos
+* 1 Fotoresistencia (LDR)
+* 1 LED 
+* 1 Resistencia de 10kΩ
+* 1 Resistencia de 220kΩ
 
 ### Ejercicio 4 - Activación de un motor
-
----
-
-## DISEÑO 
-
-<p align="center">
-  <img src="img_memoria/dino.png" width="400">
-  <img src="img_memoria/dino-salto.png" width="400">
-</p>
-
-<p align="center">
-  <img src="img_memoria/intro-dino.png" width="500">
-</p>
-
-`ej`		
-```bash
-trozo codigo	
-```
-
-[p2-dino.h](ficheros/p2-dino.h) - Archivo donde encotramos los prototipos y cabeceras. 	
+**Materiales:** 
+* Componentes Básicos
+* 1 Pulsador o Interruptor
+* 1 Actuador - Motor DC o Servomotor 
 
 ---
