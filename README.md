@@ -17,4 +17,4 @@
 * ### Prácticas
 [**P1**](./P1) **—** Práctica 1. Entrada / Salida utilizando interrupciones con lenguaje C     
 [**P2**](./P2) **—** Práctica 2. Uso de bibliotecas de programación de interfaces de usuario en modo texto       
-
+[**P3**](./P3) **—** Práctica 3. Experimentación con Arduino
