@@ -28,18 +28,19 @@ _*Visita mi [Panel de Circutios de Tinkercad] (https://www.tinkercad.com/dashboa
 En esta sección explicaremos dos ejercicios que debemos realizar para cumplir los requisitos más básicos que se solicitane en esta práctica. Con estos, aprenderemos la utilidad y manejo de E/S digitales. 
 
 ### Ejercicio 1 - Parpadeo de LED
-El primer ejercicio consiste en implementar un programa de parpadeo de LED que permita encender y apagar alternativamente tres LEDs de diferentes colores. Para ello, se nos propone una estructura y ciertas referencias para poder llevarlo a cabo. Concretamente, debemos usar las salidas digitales 11, 12 y 13 de Arduino y un intervalo de 1.5 segundos (1500 milisegundos). Los detalles se encuentran en este [enlace]("img_fich/ej1/simulacion.png") 
+El primer ejercicio consiste en implementar un programa de parpadeo de LED que permita encender y apagar alternativamente tres LEDs de diferentes colores. Para ello, se nos propone una estructura y ciertas referencias para poder llevarlo a cabo. Concretamente, debemos usar las salidas digitales 11, 12 y 13 de Arduino y un intervalo de 1.5 segundos (1500 milisegundos). Los detalles se encuentran en el [código fuente]("img_fich/ej1/ej1.ino") 
 
 <p align = "center"> Simulación del ejercicio 1 en Tinkercad.</p>
 <p align="center">
-  <img src="img_fich/ej1/simulacion.png" width="500">
+  <img src="img_fich/ej1/ej1_simulacion.png" width="500">
 </p>
 
+Una vez realizamos la simulación en la plataforma, así como el código fuente, el trabajo más complejo está hecho. El siguiente paso era realiar el montaje, lo cual podemos apreciar en las fotos a continuación y en el [video]("img_fich/ej1/ej1_simulacion.png")  que se encuentra en la misma carpeta. 
 
-
-Descripción
-Fotos
-Codigo
+<p align="center">
+  <img src="img_fich/ej1/ej1_montaje1.jpeg" width="400">
+  <img src="img_fich/ej1/ej1_montaje2.jpeg" width="400">
+</p>
 
 ### Ejercicio 2 - Parpadeo de LEDs con interruptor
 Descripción
