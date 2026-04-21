@@ -24,7 +24,7 @@ _*Visita mi [Panel de Circutios de Tinkercad]("https://www.tinkercad.com/dashboa
   
 ---
 
-A continuación, se explicarán todos los ejercicios así como los materiales precisos para replicar los montajes y simulaciones. Se presuponen algunos elementos básicos y comunes para todos los ejercicios (todos pertenecientes al [Arduino Starter Kit]("https://robotopia.es/kits-educativos/103-arduino-starter-kit-castellano.html").
+A continuación, se explicarán todos los ejercicios así como los materiales precisos para replicar los montajes y simulaciones. Se presuponen algunos elementos básicos y comunes para todos los ejercicios (todos pertenecientes al [Arduino Starter Kit](https://robotopia.es/kits-educativos/103-arduino-starter-kit-castellano.html).
 **Componentes Básicos:**    
 * Placa Arduino - Uno o Mega 2560
 * Breadboard Placa de prototipado
@@ -119,7 +119,7 @@ Para ver cómo sería el montaje físico resulta interesante visualizar las sigu
 
 <p align="center">
   <img src="img_fich/ej2_op/ej2_op_montaje1.jpeg" width="400">
-  <img src="img_fich/ej1_op/ej2_op_montaje2.jpeg" width="400">
+  <img src="img_fich/ej2_op/ej2_op_montaje2.jpeg" width="400">
 </p>
 
 ### Ejercicio 3 - Detector de la cantidad de luz
@@ -130,12 +130,48 @@ Para ver cómo sería el montaje físico resulta interesante visualizar las sigu
 * 1 Resistencia de 10kΩ
 * 1 Resistencia de 220kΩ
 
-Este proyecto consiste en diseñar un circuito que mida la intensidad lumínima de un entorno ajustando automáticamente la respuesta de un LED. 
+Este proyecto consiste en diseñar un circuito que mida la intensidad lumínima de un entorno ajustando automáticamente la respuesta de un LED. Es similar al mecanismo que usan las apantallas de los teléfonos móviles para regular su brillo.    
+
+El programa porcesará el nivel de luz mediante la fotoresistencia y a medida que el entorno oscurezca el LED aumentará su brillo. Para llevarlo a cabo, debemos aprender a configurar las entradas analógicas mapeando los valores para controlar las salidas variables. Esto queda reflejado en el [código]("img_fich/ej3_op/ej3_op_ej3_op.ino"): usado para poner en funcionamiento el circuito así como en el [video representación]("img_fich/ej3_op/ej3_op_video.mp4"). 
+
+<p align = "center"> Simulación del ejercicio opcional 3 en Tinkercad.</p>
+<p align="center">
+  <img src="img_fich/ej3_op/ej3_op_simulacion.png" width="500">
+</p>
+
+<p align="center">
+  <img src="img_fich/ej3_op/ej3_op_montaje1.jpeg" width="400">
+  <img src="img_fich/ej3_op/ej3_op_montaje2.jpeg" width="400">
+</p>
 
 ### Ejercicio 4 - Activación de un motor
 **Materiales:** 
 * Componentes Básicos
 * 1 Pulsador o Interruptor
 * 1 Actuador - Motor DC o Servomotor 
+
+Este último ejercicio resulta extremadamente interesante debido a que vemos la interacción de la placa Arduino con elementos mecánicos que requieren una gestión específica de energía o señales de posición, como es el caso de los motores requeridos en este apartado. 
+
+Una vez más, usaremos un pulsador/botón como dispositivo de entrada para activar un actuador físico. Una vez pulsado, el Arduino envia la señal para iniciar el movimiento, que en este caso es mover una pestaña una cantidad determinada de grados. 
+
+Se proponen varios tipos de actuadores como son:
+* Servomotor: controla la posición angular (pover una pestaña un número determinado de grados). Es el que yo he usado y podemos ver en las distintas demostraciones a continuación.
+* Motor DC: permite un gir continuo (como si fuesen, por ejemplo, las aspas de un ventilador).
+
+En su [código fuente]("img_fich/ej4_op/ej4_op.ino") podemos ver como aprendemos a gestionar comoponentes que a diferencia de los LEDs del resto de ejercicios de esta práctica, suelen requerir alimentación
+externa o librerías específicas de Arduino (como por ejemplo `Servo.h`) para funcionar. Consulta el [video demostración]("img_fich/ej4_op/ej4_op_video.mp4")
+<p align = "center"> Simulación del ejercicio opcional 4 en Tinkercad.</p>
+<p align="center">
+  <img src="img_fich/ej4_op/ej4_op_simulacion.png" width="500">
+</p>
+
+<p align="center">
+  <img src="img_fich/ej4_op/ej4_op_montaje1.jpeg" width="400">
+  <img src="img_fich/ej4_op/ej4_op_montaje2.jpeg" width="400">
+</p>
+
+
+
+
 
 ---
