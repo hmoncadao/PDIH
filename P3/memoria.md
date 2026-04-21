@@ -6,8 +6,6 @@ El objetivo principal de esta práctica es aprender a usar el entorno de desarro
 
 ## Estructura de los ejercicios
 Tanto los ejercicios obligatorios como los opcionales siguen la misma estructura, que nos permite cuidar el material, así como aprender la metodologia de diseño de circuitos en una placa de Arduino. Para ello además precisaremos una simulación previa en un software (usando Tinkercad) para una previa implementación hardware. Esta estructura nos garantiza comprender la lógica de control, así como los diferentes componentes electrónicos que usaremos en cada ejercicio y los programas (generados en C++) de entrada/salida. 
-....
-
 
 * **Configuración del entorno:** Se instala y configura la herramienta de trabajo necesarias para programar el dispositivo Arduino. En mi caso, ya tenía instalado el paquete. En Linux, usé el comando:		
 ```bash
@@ -130,7 +128,7 @@ Para ver cómo sería el montaje físico resulta interesante visualizar las sigu
 
 Este proyecto consiste en diseñar un circuito que mida la intensidad lumínima de un entorno ajustando automáticamente la respuesta de un LED. Es similar al mecanismo que usan las apantallas de los teléfonos móviles para regular su brillo.    
 
-El programa porcesará el nivel de luz mediante la fotoresistencia y a medida que el entorno oscurezca el LED aumentará su brillo. Para llevarlo a cabo, debemos aprender a configurar las entradas analógicas mapeando los valores para controlar las salidas variables. Esto queda reflejado en el [código]("img_fich/ej3_op/ej3_op_ej3_op.ino"): usado para poner en funcionamiento el circuito así como en el [video representación]("img_fich/ej3_op/ej3_op_video.mp4"). 
+El programa porcesará el nivel de luz mediante la fotoresistencia y a medida que el entorno oscurezca el LED aumentará su brillo. Para llevarlo a cabo, debemos aprender a configurar las entradas analógicas mapeando los valores para controlar las salidas variables. Esto queda reflejado en el [código]("img_fich/ej3_op/ej3_op_ej3_op.ino") usado para poner en funcionamiento el circuito así como en el [video representación]("img_fich/ej3_op/ej3_op_video.mp4"). 
 
 <p align = "center"> Simulación del ejercicio opcional 3 en Tinkercad.</p>
 <p align="center">
@@ -157,7 +155,7 @@ Se proponen varios tipos de actuadores como son:
 * Motor DC: permite un gir continuo (como si fuesen, por ejemplo, las aspas de un ventilador).
 
 En su [código fuente]("img_fich/ej4_op/ej4_op.ino") podemos ver como aprendemos a gestionar comoponentes que a diferencia de los LEDs del resto de ejercicios de esta práctica, suelen requerir alimentación
-externa o librerías específicas de Arduino (como por ejemplo `Servo.h`) para funcionar. Consulta el [video demostración]("img_fich/ej4_op/ej4_op_video.mp4")
+externa o librerías específicas de Arduino (como por ejemplo `Servo.h`) para funcionar. Consulta el [video demostración]("img_fich/ej4_op/ej4_op_video.mp4").
 <p align = "center"> Simulación del ejercicio opcional 4 en Tinkercad.</p>
 <p align="center">
   <img src="img_fich/ej4_op/ej4_op_simulacion.png" width="500">
