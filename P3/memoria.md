@@ -5,7 +5,7 @@ El objetivo principal de esta práctica es aprender a usar el entorno de desarro
 --- 
 
 ## Estructura de los ejercicios
-Tanto los ejercicios obligatorios como los opcionales siguen la misma estructura, que nos permite cuidar el material, así como aprende....
+Tanto los ejercicios obligatorios como los opcionales siguen la misma estructura, que nos permite cuidar el material, así como aprender la metodologia de diseño de circuitos en una placa de Arduino. Para ello además precisaremos una simulación previa en un software (usando Tinkercad) para una previa implementación hardware. Esta estructura nos garantiza comprender la lógica de control, así como los diferentes componentes electrónicos que usaremos en cada ejercicio y los programas (generados en C++) de entrada/salida. 
 ....
 
 
@@ -15,12 +15,10 @@ sudo apt install arduino
 sudo apt install arduino-core	
 ```		
 * **Implementación de programas:** Desarrollar programas en `C++`, siendo aplicaciones sencillas que se encargan de gestionar tanto entradas como salidas digitales.	
-* **Simulación y validación:** Usar la herramienta [Tinkercad] (https://www.tinkercad.com) para verificar que el diseño de nuestros prototipos es correcto antes de implementarlo físicamente y poner en riesgo nuestros componentes.
+* **Simulación y validación:** Usar la herramienta [Tinkercad](https://www.tinkercad.com) para verificar que el diseño de nuestros prototipos es correcto antes de implementarlo físicamente y poner en riesgo nuestros componentes.
 * **Adaptación de circuitos:** Adaptar los circuitos simulados en Tinkercad en nuestras placas físicas usando el Kit de Arduino.
 
 Todo esto se encuentra recogido en la carpeta individual de cada ejercicio, donde podemos ver todo tipo de detalles del funcionamiento de cada circuito individualmente. Podrás encontrar desde imagenes de la simulación, imagenes reales del montaje en la placa física, hasta videos y el código fuente que hace funcionar el experimento.  
-
-_*Visita mi [Panel de Circutios de Tinkercad]("https://www.tinkercad.com/dashboard/designs/all")._
   
 ---
 
