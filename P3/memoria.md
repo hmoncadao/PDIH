@@ -24,8 +24,8 @@ A continuación, se explicarán todos los ejercicios así como los materiales pr
 
 **Componentes Básicos:**    
 * Placa Arduino - Uno o Mega 2560
-* Breadboard Placa de prototipado
-* Cable USB para conexión al ordenador
+* Breadboard - Placa de prototipado
+* Cable USB - para conexión al ordenador
 * Jumpers - Cables de conexión macho - macho
 
 ## 1. Ejercicios Obligatorios (Requisitos Mínimos)
