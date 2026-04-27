@@ -1,0 +1,47 @@
+%!PS-Adobe-3.0
+
+<< /PageSize [842 595] >> setpagedevice
+
+% Carita sonriente amarilla
+newpath
+200 300 80 0 360 arc
+gsave
+1 1 0 setrgbcolor fill
+grestore
+0 setgray 2 setlinewidth stroke
+
+% Ojos
+newpath 170 330 8 0 360 arc 0 setgray fill
+newpath 230 330 8 0 360 arc 0 setgray fill
+
+% Sonrisa
+newpath 200 290 40 210 330 arc 3 setlinewidth stroke
+
+% Parte del texto
+
+/Helvetica-Bold findfont 28 scalefont setfont
+0 setgray
+380 350 moveto
+(Helena Moncada Ocana) show
+
+/Helvetica findfont 16 scalefont setfont
+0.4 setgray
+380 325 moveto
+(Estudiante) show
+
+% Línea recta
+
+newpath
+380 315 moveto 650 315 lineto
+0.8 setgray 1 setlinewidth stroke
+
+/Helvetica findfont 12 scalefont setfont
+0 setgray
+
+380 280 moveto (C. Periodista Daniel Saucedo Aranda) show
+380 260 moveto (s/n, Chana) show
+380 240 moveto (18014, Granada) show
+380 210 moveto (Telf. 958 24 28 02) show
+380 190 moveto (hmoncadao@correo.ugr.es) show
+
+showpage

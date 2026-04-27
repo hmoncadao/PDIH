@@ -1,0 +1,90 @@
+%!PS-Adobe-3.0
+
+% Pag 1
+
+/Helvetica-Bold findfont 20 scalefont setfont
+100 520 moveto (Mi tabla de datos) show
+
+% Líneas de la tabla
+0.5 setlinewidth
+newpath
+% Líneas horizontales
+100 500 moveto 500 500 lineto 
+100 470 moveto 500 470 lineto 
+100 310 moveto 500 310 lineto 
+% Líneas verticales 
+100 500 moveto 100 310 lineto 
+250 500 moveto 250 310 lineto 
+500 500 moveto 500 310 lineto 
+stroke
+
+% Cabecera de la tabla 
+/Helvetica-Bold findfont 12 scalefont setfont
+150 480 moveto (Valor X) show
+350 480 moveto (Valor Y) show
+
+% Filas de la tsbla
+/Helvetica findfont 12 scalefont setfont
+
+150 450 moveto (100) show
+350 450 moveto (200) show
+
+150 430 moveto (150) show
+350 430 moveto (200) show
+
+150 410 moveto (200) show
+350 410 moveto (350) show
+
+150 390 moveto (250) show
+350 390 moveto (200) show
+
+150 370 moveto (300) show
+350 370 moveto (350) show
+
+150 350 moveto (350) show
+350 350 moveto (200) show
+
+150 330 moveto (450) show
+350 330 moveto (200) show
+
+showpage 
+
+% Pag 2
+
+% Texto 
+/Helvetica-Bold findfont 18 scalefont setfont
+100 500 moveto (La imagen) show
+
+% Grafica
+newpath
+100 200 moveto       
+150 200 lineto       
+200 350 lineto       
+250 200 lineto       
+300 350 lineto       
+350 200 lineto       
+450 200 lineto       
+2 setlinewidth
+0 0 1 setrgbcolor    
+stroke
+
+% Puntos
+1 0 0 setrgbcolor    
+
+newpath 100 200 4 0 360 arc fill 
+newpath 150 200 4 0 360 arc fill
+newpath 200 350 4 0 360 arc fill
+newpath 250 200 4 0 360 arc fill
+newpath 300 350 4 0 360 arc fill
+newpath 350 200 4 0 360 arc fill
+newpath 450 200 4 0 360 arc fill
+
+% Ejes
+0 setgray            
+1 setlinewidth       
+newpath
+100 180 moveto 100 400 lineto 
+100 180 moveto 500 180 lineto 
+stroke
+
+showpage 

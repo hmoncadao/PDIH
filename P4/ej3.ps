@@ -1,0 +1,36 @@
+%!PS-Adobe-3.0
+
+<< /PageSize [842 595] >> setpagedevice
+
+% Corazon rojo
+newpath
+1 0 0 setrgbcolor    
+250 300 moveto       
+
+% Hombros del corazon
+200 300 50 0 180 arc
+300 300 50 0 180 arc
+
+% Picos del corazon
+350 300 lineto       
+250 150 lineto       
+150 300 lineto       
+closepath             
+fill                 
+
+% Texto de poesia
+/Helvetica-Bold findfont 18 scalefont setfont 
+
+0.7 setgray         
+450 250 moveto (La belleza no es nada, no permanece.) show 
+
+0.5 setgray          
+450 220 moveto (No sabes la suerte que tienes sin belleza.) show
+
+0.3 setgray          
+450 190 moveto (Porque si le gustas a alguien,) show
+
+0 setgray           
+450 160 moveto (sabes que es por otra cosa.) show
+
+showpage             
