@@ -5,7 +5,7 @@ El objetivo principal de esta práctica es aprender a usar el entorno de desarro
 --- 
 
 ## Estructura de los ejercicios
-Tanto los ejercicios obligatorios como los opcionales siguen la misma estructura, que nos permite cuidar el material, así como aprender la metodologia de diseño de circuitos en una placa de Arduino. Para ello además precisaremos una simulación previa en un software (usando Tinkercad) para una previa implementación hardware. Esta estructura nos garantiza comprender la lógica de control, así como los diferentes componentes electrónicos que usaremos en cada ejercicio y los programas (generados en C++) de entrada/salida. 
+Tanto los ejercicios obligatorios como los opcionales siguen la misma estructura, que nos permite cuidar el material, así como aprender la metodologia de diseño de circuitos en una placa de Arduino. Para ello además precisaremos una simulación previa en un software (usando Tinkercad) para una posterior implementación hardware. Esta estructura nos garantiza comprender la lógica de control, así como los diferentes componentes electrónicos que usaremos en cada ejercicio y los programas (generados en C++) de entrada/salida. 
 
 * **Configuración del entorno:** Se instala y configura la herramienta de trabajo necesarias para programar el dispositivo Arduino. En mi caso, ya tenía instalado el paquete. En Linux, usé el comando:		
 ```bash
@@ -20,11 +20,12 @@ Todo esto se encuentra recogido en la carpeta individual de cada ejercicio, dond
   
 ---
 
-A continuación, se explicarán todos los ejercicios así como los materiales precisos para replicar los montajes y simulaciones. Se presuponen algunos elementos básicos y comunes para todos los ejercicios (todos pertenecientes al [Arduino Starter Kit](https://robotopia.es/kits-educativos/103-arduino-starter-kit-castellano.html).
+A continuación, se explicarán todos los ejercicios así como los materiales precisos para replicar los montajes y simulaciones. Se presuponen algunos elementos básicos y comunes para todos los ejercicios (todos pertenecientes al [Arduino Starter Kit](https://robotopia.es/kits-educativos/103-arduino-starter-kit-castellano.html).    
+
 **Componentes Básicos:**    
 * Placa Arduino - Uno o Mega 2560
-* Breadboard Placa de prototipado
-* Cable USB para conexión al ordenador
+* Breadboard - Placa de prototipado
+* Cable USB - para conexión al ordenador
 * Jumpers - Cables de conexión macho - macho
 
 ## 1. Ejercicios Obligatorios (Requisitos Mínimos)
