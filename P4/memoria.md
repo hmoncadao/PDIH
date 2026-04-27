@@ -22,7 +22,7 @@ El [archivo original]("ej1.ps") se encuentra en el directorio de la práctica, a
 
 Para resolver este ejercicio vamos a realizar una tarjeta de visita con formato apaisado. El formato se basa en un logo personal diseñado y a su izquierda todos los datos personales. 
 
-En este caso, se configura la página en apaisado, con la línea << /PageSize [842 595] >> setpagedevice`. Además, también se usan comandos esenciales para seleccionar tipografía así como ajustar el tamaño quedando un estilo clásico y elegante. 
+En este caso, se configura la página en apaisado, con la línea `<< /PageSize [842 595] >> setpagedevice`. Además, también se usan comandos esenciales para seleccionar tipografía así como ajustar el tamaño quedando un estilo clásico y elegante. 
 
 A continuación, podemos ver en la imagen el resultado final, así como podemos ver el [archivo fuente]("ej2.ps"). 
 
