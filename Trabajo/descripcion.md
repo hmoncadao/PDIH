@@ -4,4 +4,4 @@ El objetivo de este proyecto es simplemente diseñar e implementar un sistema qu
 
 --- 
 
-Para más información es interesante consultar la [memoria]("memoria-Trabajo.pdf")de este trabajo. 
+Para más información es interesante consultar la [memoria]("memoria-Trabajo.pdf") de este trabajo. 
