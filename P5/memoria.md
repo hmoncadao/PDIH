@@ -3,6 +3,7 @@
 En esta práctica, el objetivo es procesar y analizar señales de audio digital, utlizando en mi caso el entorno de R. Usarmelos código sobre los parámetros de ondas sonoras para comprender la estructura de un fichero típico de audio (WAV), aplicando téncicas como el filtrado o efectos como el eco.		
 
 Para trabajar, la opción que me ha resultado más sencilla ha sido RStudio y sus librerías especializadas para trabajar con archivos de audio llamadas `tuneR` y `seewave`, las cuales debemos instalar previamente. 
+
 --- 
 ## Ejercicios obligatorios (mínimos)
 
