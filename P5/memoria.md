@@ -14,7 +14,7 @@ El objetivo del primer ejercicio (el único obligatorio) era familiarizarse con 
 Para ello, creamos `nombre.wav` y `apellido.wav` que contienen dentro "Helena" en el caso de nombre, y "Moncada" en el caso de apellido generados previamente. En mi caso, al usar Linux, utilicé el siguiente comando:
 
 ```bash
-espeak "Helena" -w helena.wav	
+espeak "Helena" -w nombre.wav	
 ```
 
 El proceso consistía en leer los ficheros con `readWave()` y dibujar la onda de ambos sonidos por separado. 
