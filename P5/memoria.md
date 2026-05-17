@@ -3,6 +3,7 @@
 En esta práctica, el objetivo es procesar y analizar señales de audio digital, utlizando en mi caso el entorno de R. Usarmelos código sobre los parámetros de ondas sonoras para comprender la estructura de un fichero típico de audio (WAV), aplicando téncicas como el filtrado o efectos como el eco.		
 
 Para trabajar, la opción que me ha resultado más sencilla ha sido RStudio y sus librerías especializadas para trabajar con archivos de audio llamadas `tuneR` y `seewave`, las cuales debemos instalar previamente. 
+
 --- 
 ## Ejercicios obligatorios (mínimos)
 
@@ -13,7 +14,7 @@ El objetivo del primer ejercicio (el único obligatorio) era familiarizarse con 
 Para ello, creamos `nombre.wav` y `apellido.wav` que contienen dentro "Helena" en el caso de nombre, y "Moncada" en el caso de apellido generados previamente. En mi caso, al usar Linux, utilicé el siguiente comando:
 
 ```bash
-espeak "Helena" -w helena.wav	
+espeak "Helena" -w nombre.wav	
 ```
 
 El proceso consistía en leer los ficheros con `readWave()` y dibujar la onda de ambos sonidos por separado. 
