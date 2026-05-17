@@ -29,7 +29,7 @@ Además, para resolverlo tenemos que obtener los metadatos e información ténci
   <img src="img_memoria/cabeceras.png" width="500">
 </p>
 
-A continuación, se debe unir ambos sonidos en uno nuevo, usando `bind()`, creando una nueva señal. Una vez almacenada, creamos una nueva onda. Se puede consultar en [basico.wav]("obligatorio/basico.wav"). En este escuchamos "Helena Moncada". 
+A continuación, se debe unir ambos sonidos en uno nuevo, usando `bind()`, creando una nueva señal. Una vez almacenada, creamos una nueva onda. Se puede consultar en [basico.wav](obligatorio/basico.wav). En este escuchamos "Helena Moncada". 
 
 <p align="center">
   <img src="img_memoria/ej1_nombreapellido.png" width="500">
@@ -41,7 +41,7 @@ A continuación, se debe unir ambos sonidos en uno nuevo, usando `bind()`, crean
 
 ### Ejercicio 1 - Filtro de frecuencia
 
-Este primer ejercicio opcional consiste en aplicar un filtro de frecuencia sobre `basico.wav` que es el audio combinado, y eliminar las frecuencias entre 10.000Hz y 20.000Hz, usando samos la función `bwfilter()`. A continuación, almacenaremos la señal obtenida como otro fichero WAV llamado [filtrado.wav]("opcional/ej1/filtrado.wav"). 		
+Este primer ejercicio opcional consiste en aplicar un filtro de frecuencia sobre `basico.wav` que es el audio combinado, y eliminar las frecuencias entre 10.000Hz y 20.000Hz, usando samos la función `bwfilter()`. A continuación, almacenaremos la señal obtenida como otro fichero WAV llamado [filtrado.wav](opcional/ej1/filtrado.wav). 		
 	
 <p align="center">
   <img src="img_memoria/ej2_onda.png" width="500">
@@ -59,7 +59,7 @@ El primer efecto era el eco. La primera versión planteada generaba silencios, p
 </p>
 
 
-El segundo apartado, consistía en darle la vuelta al sonido y almacenarlo con el nombre [alreves.wav]("opcional/ej2/alreves.wav"). En este, se da la vuelta temporalmente, usando `revw()` a la muestra.
+El segundo apartado, consistía en darle la vuelta al sonido y almacenarlo con el nombre [alreves.wav](opcional/ej2/alreves.wav). En este, se da la vuelta temporalmente, usando `revw()` a la muestra.
 
 <p align="center">
   <img src="img_memoria/ej3_reves.png" width="500">
